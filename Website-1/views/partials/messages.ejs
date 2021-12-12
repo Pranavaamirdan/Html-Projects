@@ -1,0 +1,429 @@
+<% if(typeof errors != 'undefined'){ %>
+    <% errors.forEach(function(error) { %>
+        <script src="https://kit.fontawesome.com/a099cf6fae.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <div class="alert show">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg">Warnings: <%= error.msg %></span> 
+            <span class="close-btn">
+                <span class="fas fa-times"></span>
+            </span>
+        </div> 
+        <style>
+            .body{
+                overflow: hidden;
+            }
+
+            .alert {
+                background: rgba(255,255,255, 0.5);
+                padding: 20px 40px;
+                min-width: 420px;
+                position: absolute;
+                right: 0;
+                top: 100px;
+                overflow: hidden;
+                border-radius: 4px;
+                border-left: 6px solid rgba(255,255,255, 0.7);
+            }
+
+            .alert.show {
+                animation: show_slide 1s ease forwards;
+            }
+            @keyframes show_slide {
+                0%{
+                    transform: translateX(100%);
+                }
+                40%{
+                    transform: translateX(-10%);
+                }
+                80%{
+                    transform: translateX(0%);
+                }
+                100%{
+                    transform: translateX(-10px);
+                }
+            }
+            .alert.hide{
+                animation: hide_slide 1s ease forwards;
+            }
+            @keyframes hide_slide {
+            0%{
+                transform: translateX(-10px);
+            }
+            40%{
+                transform: translateX(0%);
+            }
+            80%{
+                transform: translateX(-10%);
+            }
+            100%{
+                transform: translateX(100%);
+            }
+            }
+            .alert .fa-exclamation-circle {
+                position: absolute; 
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgba(255,255,255, 0.8);
+                font-size: 25px;
+            }
+
+            .alert .msg{
+                padding: 0 20px;
+                font-size: 18px;
+                color: rgba(255,255,255, 0.7);
+            }
+
+            .alert .close-btn{
+                position: absolute;
+                right: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(255,255,255, 0.6);
+                padding: 20px 18px;
+            }
+
+            .alert .close-btn:hover{
+                background: rgba(255,255,255, 0.8);
+            }
+
+            .close-btn .fa-times{
+                color: white;
+                font-size: 22px;
+                line-height: 40px
+            }
+        </style>
+        <script>
+            $('.close-btn').click(function(){
+                $('.alert').removeClass("show");
+                $('.alert').addClass("hide");
+            });
+            setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },5000);
+        </script>
+    <% }); %>
+<% } %>
+
+<% if(success_msg != "") { %>
+    <script src="https://kit.fontawesome.com/a099cf6fae.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <div class="alert show">
+            <span class="fas fa-key"></span>
+            <span class="msg"> <%= success_msg %></span> 
+            <span class="close-btn">
+                <span class="fas fa-times"></span>
+            </span>
+        </div> 
+        <style>
+            .body{
+                overflow: hidden;
+            }
+
+            .alert {
+                background: rgba(255,255,255, 0.5);
+                padding: 20px 40px;
+                min-width: 420px;
+                position: absolute;
+                right: 0;
+                top: 100px;
+                overflow: hidden;
+                border-radius: 4px;
+                border-left: 6px solid rgba(255,255,255, 0.7);
+            }
+
+            .alert.show {
+                animation: show_slide 1s ease forwards;
+            }
+            @keyframes show_slide {
+                0%{
+                    transform: translateX(100%);
+                }
+                40%{
+                    transform: translateX(-10%);
+                }
+                80%{
+                    transform: translateX(0%);
+                }
+                100%{
+                    transform: translateX(-10px);
+                }
+            }
+            .alert.hide{
+                animation: hide_slide 1s ease forwards;
+            }
+            @keyframes hide_slide {
+            0%{
+                transform: translateX(-10px);
+            }
+            40%{
+                transform: translateX(0%);
+            }
+            80%{
+                transform: translateX(-10%);
+            }
+            100%{
+                transform: translateX(100%);
+            }
+            }
+            .alert .fa-key {
+                position: absolute; 
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgba(255,255,255, 0.8);
+                font-size: 25px;
+            }
+
+            .alert .msg{
+                padding: 0 20px;
+                font-size: 18px;
+                color: rgba(255,255,255, 0.7);
+            }
+
+            .alert .close-btn{
+                position: absolute;
+                right: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(255,255,255, 0.6);
+                padding: 20px 18px;
+            }
+
+            .alert .close-btn:hover{
+                background: rgba(255,255,255, 0.8);
+            }
+
+            .close-btn .fa-times{
+                color: white;
+                font-size: 22px;
+                line-height: 40px
+            }
+        </style>
+        <script>
+            $('.close-btn').click(function(){
+                $('.alert').removeClass("show");
+                $('.alert').addClass("hide");
+            });
+            setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },5000);
+        </script>
+<% } %>
+
+<% if(error_msg != "") { %>
+    <script src="https://kit.fontawesome.com/a099cf6fae.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <div class="alert show">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg"> <%= error_msg %></span> 
+            <span class="close-btn">
+                <span class="fas fa-times"></span>
+            </span>
+        </div> 
+        <style>
+            .body{
+                overflow: hidden;
+            }
+
+            .alert {
+                background: rgba(255,255,255, 0.5);
+                padding: 20px 40px;
+                min-width: 420px;
+                position: absolute;
+                right: 0;
+                top: 100px;
+                overflow: hidden;
+                border-radius: 4px;
+                border-left: 6px solid rgba(255,255,255, 0.7);
+            }
+
+            .alert.show {
+                animation: show_slide 1s ease forwards;
+            }
+            @keyframes show_slide {
+                0%{
+                    transform: translateX(100%);
+                }
+                40%{
+                    transform: translateX(-10%);
+                }
+                80%{
+                    transform: translateX(0%);
+                }
+                100%{
+                    transform: translateX(-10px);
+                }
+            }
+            .alert.hide{
+                animation: hide_slide 1s ease forwards;
+            }
+            @keyframes hide_slide {
+            0%{
+                transform: translateX(-10px);
+            }
+            40%{
+                transform: translateX(0%);
+            }
+            80%{
+                transform: translateX(-10%);
+            }
+            100%{
+                transform: translateX(100%);
+            }
+            }
+            .alert .fa-exclamation-circle {
+                position: absolute; 
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgba(255,255,255, 0.8);
+                font-size: 25px;
+            }
+
+            .alert .msg{
+                padding: 0 20px;
+                font-size: 18px;
+                color: rgba(255,255,255, 0.7);
+            }
+
+            .alert .close-btn{
+                position: absolute;
+                right: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(255,255,255, 0.6);
+                padding: 20px 18px;
+            }
+
+            .alert .close-btn:hover{
+                background: rgba(255,255,255, 0.8);
+            }
+
+            .close-btn .fa-times{
+                color: white;
+                font-size: 22px;
+                line-height: 40px
+            }
+        </style>
+        <script>
+            $('.close-btn').click(function(){
+                $('.alert').removeClass("show");
+                $('.alert').addClass("hide");
+            });
+            setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },5000);
+        </script>
+<% } %>
+
+<% if(error != "") { %>
+    <script src="https://kit.fontawesome.com/a099cf6fae.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <div class="alert show">
+            <span class="fas fa-exclamation-circle"></span>
+            <span class="msg"><%= error %></span> 
+            <span class="close-btn">
+                <span class="fas fa-times"></span>
+            </span>
+        </div> 
+        <style>
+            .body{
+                overflow: hidden;
+            }
+
+            .alert {
+                background: rgba(255,255,255, 0.5);
+                padding: 20px 40px;
+                min-width: 420px;
+                position: absolute;
+                right: 0;
+                top: 100px;
+                overflow: hidden;
+                border-radius: 4px;
+                border-left: 6px solid rgba(255,255,255, 0.7);
+            }
+
+            .alert.show {
+                animation: show_slide 1s ease forwards;
+            }
+            @keyframes show_slide {
+                0%{
+                    transform: translateX(100%);
+                }
+                40%{
+                    transform: translateX(-10%);
+                }
+                80%{
+                    transform: translateX(0%);
+                }
+                100%{
+                    transform: translateX(-10px);
+                }
+            }
+            .alert.hide{
+                animation: hide_slide 1s ease forwards;
+            }
+            @keyframes hide_slide {
+            0%{
+                transform: translateX(-10px);
+            }
+            40%{
+                transform: translateX(0%);
+            }
+            80%{
+                transform: translateX(-10%);
+            }
+            100%{
+                transform: translateX(100%);
+            }
+            }
+            .alert .fa-exclamation-circle {
+                position: absolute; 
+                left: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: rgba(255,255,255, 0.8);
+                font-size: 25px;
+            }
+
+            .alert .msg{
+                padding: 0 20px;
+                font-size: 18px;
+                color: rgba(255,255,255, 0.7);
+            }
+
+            .alert .close-btn{
+                position: absolute;
+                right: 1px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(255,255,255, 0.6);
+                padding: 20px 18px;
+            }
+
+            .alert .close-btn:hover{
+                background: rgba(255,255,255, 0.8);
+            }
+
+            .close-btn .fa-times{
+                color: white;
+                font-size: 22px;
+                line-height: 40px
+            }
+        </style>
+        <script>
+            $('.close-btn').click(function(){
+                $('.alert').removeClass("show");
+                $('.alert').addClass("hide");
+            });
+            setTimeout(function(){
+             $('.alert').removeClass("show");
+             $('.alert').addClass("hide");
+           },5000);
+        </script>
+<% } %>

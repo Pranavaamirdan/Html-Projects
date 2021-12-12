@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+   </head>
+<body>
+<div>
+ <!-- SideBar -->
+  <div class="sidebar" style= "cursor: none">
+    <div class="logo-details" style= "cursor: none">
+      <i class='bx bx-home' style= "cursor: none"></i>
+        <div class="logo_name" style= "cursor: none">Provon</div>
+        <i class='bx bx-menu' id="btn" style= "cursor: none"></i>
+    </div>
+    <ul class="nav-list" style= "cursor: none">
+      <li>
+          <i class='bx bx-search-alt' style= "cursor: none"></i>
+         <input type="text" placeholder="Search..." style= "cursor: none">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#one" style= "cursor: none" >
+          <i class='bx bx-grid-alt' style= "cursor: none"></i>
+          <span class="links_name" style= "cursor: none">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="#two" style= "cursor: none">
+         <i class='bx bx-user' style= "cursor: none"></i>
+         <span class="links_name" style= "cursor: none">User</span>
+       </a>
+       <span class="tooltip">User</span>
+     </li>
+     <li>
+       <a href="#three" style= "cursor: none">
+         <i class='bx bx-chat' style= "cursor: none"></i>
+         <span class="links_name" style= "cursor: none">Messages</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li>
+     <li>
+       <a href="#four" style= "cursor: none">
+         <i class='bx bx-pie-chart-alt-2' style= "cursor: none"></i>
+         <span class="links_name" style= "cursor: none">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+      <li class="profile">
+        <div class="profile-details">
+          <!--<img src="profile.jpg" alt="profileImg">-->
+          <div class="name_job">
+            <div class="name"><%= name %></div>
+            <div class="job">Web Developer</div>
+          </div>
+        </div>
+        <a href="/users/logout">
+        <i class='bx bx-log-out' id="log_out" ></i>
+      </a>
+    </li>
+    </ul>
+  </div>
+</div>
+
+<section class="home-section">
+      <section class="one" id="one">
+          <div class="text">Page One</div>
+      </section>
+      <section class="two" id="two">
+          <div class="text">Page Two</div>
+      </section>
+      <section class="three" id="three">
+          <div class="text">Page Three</div>
+      </section>
+      <section class="four" id="four">
+          <div class="text">Page Four</div>
+      </section>
+</section>
+  <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body{
+  width:100%;
+  overflow-x:hidden;
+  overflow-y:hidden;
+  cursor: none;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background:linear-gradient(to right bottom,rgb(255, 175, 135),rgb(255, 104, 126));
+  box-shadow: 0 1px 9px 1px rgba(225,225,225,1);
+  padding: 6px 14px;
+  z-index: 92;
+  transition: all 0.5s ease;
+  list-style: none;
+}
+
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .bx-home{
+  opacity: 0;
+  transition: all 0.5s ease;
+  color: rgb(26, 70, 69);
+}
+.sidebar .logo-details .logo_name{
+  color: rgb(26, 70, 69);
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .bx-home,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: rgb(26, 70, 69);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background : linear-gradient(to right bottom,#051821,#1a4645,#266867,#379291,turquoise);
+  color:rgb(255, 104, 126);
+  box-shadow: 0 5px 10px rgba(255,255,255, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0);
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: rgba(255, 255, 255,0.5);;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+  background: rgba(255, 255, 255,0.8);
+  color: rgb(26, 70, 69);
+}
+.sidebar .bx-search-alt{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: rgb(26, 70, 69);;
+}
+.sidebar.open .bx-search-alt:hover{
+  background : linear-gradient(to right bottom,#051821,#1a4645,#266867,#379291,turquoise);
+  color: rgb(255, 104, 126);
+}
+.sidebar .bx-search-alt:hover{
+  background: rgba(255, 255, 255,0.8);
+  color: rgb(26, 70, 69);
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.sidebar li a:hover{
+  background : linear-gradient(to right bottom,#051821,#1a4645,#266867,#379291,turquoise);
+  color: rgb(255, 104, 126);
+}
+.sidebar li a .links_name{
+  color: rgb(26, 70, 69);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: rgb(255, 104, 126);
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  left: 9px;
+  bottom: 3px;
+  padding: 10px 14px;
+  background: rgb(26, 70, 69);
+  transition: all 0.5s ease;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  position: fixed;
+  height: 60px;
+  left: 0;
+  width: 250px;
+  bottom: -8px;
+  border-radius: 0;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1a4645;
+  color: rgb(255, 104, 126);
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar .profile #log_out:hover{
+  background: #266867;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+
+.home-section{
+  position: relative;
+  background: linear-gradient(to right bottom,#051821,#1a4645,#266867,#379291,turquoise);
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+
+.home-section section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+
+.one {
+  background: linear-gradient(to right bottom,#051821,#1a4645,#266867,#379291,turquoise);
+  color: rgb(255, 104, 126);
+}
+
+.two {
+  background: linear-gradient(to right bottom,#ffaf87,#ff687e);
+  color: rgb(26, 70, 69);
+}
+
+.three {
+  background: linear-gradient(to right bottom,#051821,#1a4645,#266867,#379291,turquoise);
+  color: rgb(255, 104, 126);
+}
+
+.four {
+  background: linear-gradient(to right bottom,#ffaf87,#ff687e);
+  color: rgb(26, 70, 69);
+}
+  </style>
+
+  <script>
+let sidebar = document.querySelector(".sidebar");
+let closeBtn = document.querySelector("#btn");
+let searchBtn = document.querySelector(".bx-search-alt");
+
+closeBtn.addEventListener("click", ()=>{
+  sidebar.classList.toggle("open");
+  menuBtnChange();//calling the function(optional)
+});
+
+searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+  sidebar.classList.toggle("open");
+  menuBtnChange(); //calling the function(optional)
+});
+
+// following are the code to change sidebar button(optional)
+function menuBtnChange() {
+ if(sidebar.classList.contains("open")){
+   closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+ }else {
+   closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+ }
+}
+
+function addBoxShadow(id) {
+ const element = document.getElementById(id);
+ element.style.boxShadow = "0px 0px 10px 5px rgba(0, 0, 0, 0.1)";
+}
+
+function removeBoxShadow(id) {
+    const element = document.getElementById(id);
+    element.style.boxShadow = "";
+   }
+
+  </script>
+</body>
+</html>

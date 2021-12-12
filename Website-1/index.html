@@ -1,0 +1,347 @@
+.background.light .glass-overlay .title .border .card {
+    background: var(--Glass-light);
+  }
+
+  .background.dark .glass-overlay .title .border .card {
+    background: var(--Glass-dark);
+  }
+
+  .background .glass-overlay .title .border .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .background.light .glass-overlay .title .border .card .box {
+    background: var(--Glass-light-login);
+  }
+
+  .background.dark .glass-overlay .title .border .card .box {
+    background: var(--Glass-dark-login);
+  }
+
+  .background .glass-overlay .title .border .card .box:hover {
+    transform: translatey(-2%);
+  }
+
+  .background .glass-overlay .title .border .card .box .content {
+    padding: 20px;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+
+  .background .glass-overlay .title .border .card .box .content h2 {
+    font-size: 1.8em;
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+  .background.light .glass-overlay .title .border .card .box .content h2 {
+    background: -moz-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: -webkit-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: linear-gradient(to right bottom, #ffaf87, #ff687e);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .background.dark .glass-overlay .title .border .card .box .content h2 {
+    background: -moz-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: -webkit-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .background .glass-overlay .svg {
+    width: 79%;
+  }
+
+  .background .glass-overlay .svg #register {
+    height: 9%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+  }      
+  .background.light .glass-overlay .svg #register{
+    background: rgb(255,255,255,0.6);
+  }
+  .background.dark .glass-overlay .svg #register {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .background .glass-overlay .svg #register h2 {
+    background: -moz-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: -webkit-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: linear-gradient(to right bottom, #ffaf87, #ff687e);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+  .background.dark .glass-overlay .svg #register h2 {
+    background: -moz-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: -webkit-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .background .glass-overlay .svg #register a {
+    text-decoration: none;
+    display: flex;
+  }
+
+  .background .glass-overlay .svg #register a button {
+    border-radius: 50px;
+    padding: 4px 20px 4px 20px;
+    margin-left: 265%;
+    transition: all 0.6s ease-in-out;
+  }
+  .background.light .glass-overlay .svg #register a button {
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px var(--Light) inset;
+  }
+  .background.light .glass-overlay .svg #register a button:hover {
+    box-shadow: none;
+  }
+  .background.dark .glass-overlay .svg #register a button {
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px var(--Dark) inset;
+  }
+  .background.light .glass-overlay .svg #register a button:hover {
+    box-shadow: none;
+  }
+
+  .background .glass-overlay .svg #register a button span {
+    transition: all 0.6s ease-in-out;
+    font-size: 20px;
+  }
+  .background.light .glass-overlay .svg #register a button span {
+    background: -moz-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: -webkit-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: linear-gradient(to right bottom, #ffaf87, #ff687e);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+  .background.light .glass-overlay .svg #register a button:hover span {
+    -webkit-text-fill-color: var(--Light);
+  }
+  .background.dark .glass-overlay .svg #register a button span {
+    background: -moz-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: -webkit-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+  .background.dark .glass-overlay .svg #register a button:hover span {
+    -webkit-text-fill-color: var(--Dark);
+  }
+  
+  .background .glass-overlay .svg .pic {  
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .background .glass-overlay .svg .pic svg {
+    z-index: 4;
+  }
+
+
+  .background .glass-overlay .svg .pic .hovering {
+    animation: a 3s infinite ease-in-out;
+  }
+  
+  @keyframes a {
+    from {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, -10px);
+    }
+    to {
+      transform: translate(0, -0px);
+    }
+  }
+
+  .background .glass-overlay .svg .pic .hovering2 {
+    animation: a2 3s infinite ease-in-out;
+  }
+
+  @keyframes a2 {
+    from {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, -20px);
+    }
+    to {
+      transform: translate(0, -0px);
+    }
+  }
+  
+  .background.light .glass-overlay .svg .pic linearGradient .one{
+    stop-color: rgb(255, 175, 135);
+  }
+  .background.light .glass-overlay .svg .pic linearGradient .two{
+    stop-color: rgb(255, 104, 126);
+  }
+  .background.dark .glass-overlay .svg .pic linearGradient .one{
+    stop-color: #1a4645;
+  }
+  .background.dark .glass-overlay .svg .pic linearGradient .two{
+    stop-color: turquoise;
+  }
+
+  .background.light .glass-overlay .svg .pic linearGradient .three{
+    stop-color: rgb(255, 175, 135);
+  }
+  .background.light .glass-overlay .svg .pic linearGradient .four{
+    stop-color: rgb(255, 139, 130);
+  }
+  .background.dark .glass-overlay .svg .pic linearGradient .three{
+    stop-color: #1a4645;
+  }
+  .background.dark .glass-overlay .svg .pic linearGradient .four{
+    stop-color: #30a298;
+  }
+
+  .background.light .glass-overlay .svg .pic .leaf {
+    fill: #f2f2f2;
+  }
+  .background.dark .glass-overlay .svg .pic .leaf {
+    fill: #131419;
+  }
+
+  .background.light .glass-overlay .svg .pic .stem {
+    fill: #fff;
+  }
+  .background.dark .glass-overlay .svg .pic .stem {
+    fill: #23242b;
+  }
+
+  .background.light .glass-overlay .svg .pic .doorS {
+    fill: #e0e5ec;
+  }
+  .background.dark .glass-overlay .svg .pic .doorS {
+    fill: #131419;
+  }
+
+  .background.light .glass-overlay .svg .pic .door {
+    fill: #ccc;
+  }
+  .background.dark .glass-overlay .svg .pic .door {
+    fill: #23242b;
+  }
+
+  .background.light .glass-overlay .svg .pic .window {
+    fill: #e0e5ec;
+  }
+  .background.dark .glass-overlay .svg .pic .window {
+    fill: #131419;
+  }
+
+  .background .glass-overlay .edge {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .background .glass-overlay .edge button {
+    width: 90%;
+    height: 20%;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    cursor: none;
+  }
+
+  .background.light .glass-overlay .edge button {
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px var(--Light) inset;
+  }
+
+  .background.light .glass-overlay .edge button:hover {
+    box-shadow: none;
+  }
+
+  .background.dark .glass-overlay .edge button {
+    border: solid 3px transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px var(--Dark) inset;
+  }
+
+  .background.dark .glass-overlay .edge button:hover {
+    box-shadow: none;
+  }
+
+  .background .glass-overlay .edge button i {
+    font-size: 30px;
+    transition: all 0.4s ease;
+  }
+
+  .background.light .glass-overlay .edge button i {
+    background: -moz-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: -webkit-linear-gradient(to right bottom, #ffaf87, #ff687e);
+    background: linear-gradient(to right bottom, #ffaf87, #ff687e);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .background.light .glass-overlay .edge button:hover i {
+    -webkit-text-fill-color: var(--Light);
+  }
+
+  .background.dark .glass-overlay .edge button i {
+    background: -moz-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: -webkit-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    background: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text-box;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .background.dark .glass-overlay .edge button:hover i {
+    -webkit-text-fill-color: var(--Dark);
+  }

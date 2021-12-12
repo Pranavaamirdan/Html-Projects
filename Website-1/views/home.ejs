@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/theme.js"></script> 
+  <title>Home</title>
+</head>
+<body>
+  <div class="background light">
+    <div class="nav-bar">
+      <ul>
+        <a href="/users/login" style= "cursor: none">
+          <li>
+            <i class='bx bxs-log-in-circle' style= "cursor: none; font-size: 19px;"></i>
+            <span class="links_name" style= "cursor: none"></span>
+          <span class="logintip">Login</span>
+        </li>
+      </a>
+      <a href="/users/register" style= "cursor: none">
+        <li>
+            <i class='bx bxs-user' style= "cursor: none"></i>
+            <span class="links_name" style= "cursor: none"></span>
+          <span class="registertip">Register</span>
+        </li>
+      </a>
+      </ul>
+      <button class="theme" style="cursor:none"><i class="fa fa-moon"></i></button>
+    </div>
+  </div>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins";
+    }
+
+    body {
+      cursor: none;
+      font-family: "Poppins";
+    }
+
+    :root {
+      --Light: rgb(224, 229, 236);
+      --Dark: rgb(19, 20, 25);
+      --Glass-light: linear-gradient(to right bottom, #ffaf87, #ff687e);
+      --Glass-dark: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, #40e0d0);
+      --Glass-light-main: rgba(255,255,255, 0.5);
+      --Glass-dark-main: rgba(0,0,0, 0.5);
+    }
+
+    .background {
+      width: 100%;
+      height: 100vh
+    }
+
+    .background.light {
+      background: var(--Light);
+    }
+    .background.dark {
+      background: var(--Dark);
+    }
+
+    .background .nav-bar {
+      position: absolute;
+      top: 15px;
+      right: 75px;
+      background: transparent;
+      margin-left: 10px;
+      z-index: 100;
+    }
+
+    .background .nav-bar a li {
+      list-style: none;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      padding: 9px 16px 9px 8px;
+      border-radius: 50px;
+      transition: all 0.4s ease;
+    }
+    .background.light .nav-bar a li {
+      border: solid 3px transparent;
+      background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #ffaf87, #ff687e);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px var(--Light) inset;
+    }
+    .background.dark .nav-bar a li {
+      border: solid 3px transparent;
+      background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px var(--Dark) inset;
+    }
+
+    .background .nav-bar a li:hover {
+      box-shadow: none;
+    }
+
+    .background .nav-bar a li i{
+      padding: 3px;
+      font-size: 19px;
+      transition: all 0.4s ease;
+    }
+
+    .background.light .nav-bar a li i {
+        background: -moz-linear-gradient(to right bottom, #ffaf87, #ff687e);
+        background: -webkit-linear-gradient(to right bottom, #ffaf87, #ff687e);
+        background: linear-gradient(to right bottom, #ffaf87, #ff687e);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text-box;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .background.light .nav-bar a li:hover i {
+        -webkit-text-fill-color: var(--Light);
+      }
+
+      .background.dark .nav-bar a li i {
+        background: -moz-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+        background: -webkit-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+        background: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text-box;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .background.dark .nav-bar a li:hover i {
+        -webkit-text-fill-color: var(--Dark);
+      }
+
+    .background .nav-bar a{
+      height: 100%;
+      width: 100%;
+      border-radius: 12px;
+      align-items: center;
+      text-decoration: none;
+      font-size: 17px; 
+      transition: all 0.4s ease;
+    }
+
+    .background .nav-bar a li span {
+      transition: all 0.4s ease;
+    }
+
+    .background.light .nav-bar a li span {
+      background:-moz-linear-gradient(to right bottom, #ffaf87, #ff687e); 
+      background: -webkit-linear-gradient(to right bottom, #ffaf87, #ff687e); 
+      background: linear-gradient(to right bottom, #ffaf87, #ff687e);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text-box;
+      -webkit-text-fill-color:transparent;
+    } 
+    .background.light .nav-bar a:hover li span {
+      -webkit-text-fill-color: var(--Light);
+    }
+    .background.dark .nav-bar li a span {
+      background:-moz-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise); 
+      background: -webkit-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise); 
+      background: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text-box;
+      -webkit-text-fill-color:transparent;
+    } 
+    .background.dark .nav-bar a:hover li span {
+      -webkit-text-fill-color: var(--Dark);
+    }
+    
+    .background button {
+      position: fixed;
+      height: 50px;
+      width: 50px;
+      border: none;
+      border-radius: 50%;
+      z-index: 3;
+      transition: all 0.4s ease;
+    }
+    .background .theme {
+      top: 15px;
+      right: 20px;
+    }
+    .background .home {
+      top: 70px;
+      right: 20px;
+    }
+
+    .background.light button{
+      border: solid 3px transparent;
+      background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #ffaf87, #ff687e);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px var(--Light) inset;
+    }
+    .background.light button:hover {
+      box-shadow: none;
+    }
+
+    .background.dark button{
+      border: solid 3px transparent;
+      background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px var(--Dark) inset;
+    }
+    .background.dark button:hover{
+      box-shadow: none;
+    }
+
+    .background button i{
+      font-size: 21px;
+      transition: all 0.4s ease;
+    }
+
+    .background.light button i{     
+    	background:-moz-linear-gradient(to right bottom, #ffaf87, #ff687e); 
+      background: -webkit-linear-gradient(to right bottom, #ffaf87, #ff687e); 
+      background: linear-gradient(to right bottom, #ffaf87, #ff687e);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text-box;
+      -webkit-text-fill-color:transparent;
+    }
+    .background.light button:hover i{
+      -webkit-text-fill-color: var(--Light);
+    }
+
+    .background.dark button i{
+      background:-moz-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise); 
+      background: -webkit-linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise); 
+      background: linear-gradient(to right bottom, #051821, #1a4645, #266867, #379291, turquoise);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text-box;
+      -webkit-text-fill-color:transparent;
+    }
+    .background.dark button:hover i {
+      -webkit-text-fill-color: var(--Dark);
+    }
+  </style>
+
+  <script>
+    const button = document.querySelector(".theme");
+  button.addEventListener("click", () => {
+    if($(".background").hasClass("light")){
+      $(".background").removeClass('light');
+      $(".background").addClass('dark');
+      $('.fa').removeClass("fa-moon");
+      $('.fa').addClass("fa-sun");
+    } else if($(".background").hasClass("dark")) {
+      $(".background").removeClass('dark');
+      $(".background").addClass('light');
+      $('.fa').removeClass("fa-sun");
+      $('.fa').addClass("fa-moon");
+    }
+  }); 
+  </script>
+  
+
+</body>
+</html>
